@@ -19,3 +19,7 @@ def secret_check():
     return {
         "secret_present": bool(os.getenv("APP_SECRET_KEY"))
     }
+
+@app.get("/version")
+def root():
+    return {"version": "v4"}
